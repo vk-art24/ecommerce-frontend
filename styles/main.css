@@ -183,5 +183,131 @@
     animation: fadeup 0.8s ease forwards;
     animation-delay: 0.4s;
 }
+/* =========================
+   PRODUCTS SECTION
+========================= */
 
-    
+.products-section {
+  padding: 60px 40px;
+  background-color: #f9f9f9;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+/* PRODUCT GRID */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* PRODUCT CARD */
+.product-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* PRODUCT IMAGE */
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+/* PRODUCT TEXT */
+.product-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+/* ADD TO CART BUTTON */
+.product-card button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #5d5763;
+  color: #d4d1d1;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.product-card button:hover {
+  background-color: #8672a0;
+}
+/* PRODUCT GRID RESPONSIVE */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+@media (max-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  } 
+}
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.product-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.add-to-cart-btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.add-to-cart-btn:hover {
+    background-color: #222;
+    transform: scale(1.05);
+}
+.product-card {
+    text-align: center;
+}
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+}
