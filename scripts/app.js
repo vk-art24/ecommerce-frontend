@@ -58,12 +58,24 @@ function fetchProducts() {
     card.classList.add("product-card");
 
     card.innerHTML = `
-      <img src="${product.image}" alt="${product.title}" loading="lazy">
-      <h3>${product.title}</h3>
-      <p class="price">₹ ${Math.round(product.price * 80)}</p>
-      <button class="add-to-cart">Add to Cart</button>
-    `;
+  <a href="product.html?id=${product.id}">
+    <img src="${product.image}" alt="${product.title}" loading="lazy">
+    <h3>${product.title}</h3>
+  </a>
+  <p class="price">₹ ${Math.round(product.price * 80)}</p>
+  <button class="add-to-cart">Add to Cart</button>
+`;
 
     productGrid.appendChild(card);
   });
+}
+
+function updateCartCount() {
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+  const total = cart.reduce((sum, item) => sum + item.quantity, 0);
+
+  const cartCount = document.getElementById("cart-count");
+  if (cartCount) {
+    cartCount.textContent = total;
+  }
 }
