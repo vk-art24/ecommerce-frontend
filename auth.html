@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login / Signup</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+
+  <header class="header">
+    <h2>Welcome</h2>
+  </header>
+
+  <main class="auth-container">
+
+    <!-- Login Form -->
+    <form id="loginForm" class="auth-form">
+      <h3>Login</h3>
+
+      <input type="email" id="loginEmail" placeholder="Email">
+      <input type="password" id="loginPassword" placeholder="Password">
+
+      <a href="#" class="forgot">Forgot Password?</a>
+
+      <button type="button" id="loginBtn">Login</button>
+
+      <p>
+        Don’t have an account?
+        <span id="showSignup">Sign Up</span>
+      </p>
+    </form>
+
+    <!-- Signup Form -->
+    <form id="signupForm" class="auth-form hidden">
+      <h3>Sign Up</h3>
+
+      <input type="text" id="signupName" placeholder="Full Name">
+      <input type="email" id="signupEmail" placeholder="Email">
+      <input type="password" id="signupPassword" placeholder="Password">
+      <input type="password" id="signupConfirm" placeholder="Confirm Password">
+
+      <button type="submit">Sign Up</button>
+
+      <p>
+        Already have an account?
+        <span id="showLogin">Login</span>
+      </p>
+    </form>
+
+  </main>
+
+  <script type="module" src="scripts/login.js"></script>
+  <script type="module" src="scripts/firebase.js"></script>
+  <script type="module" src="scripts/login.js"></script>
+  <link rel="icon" href="data:,">
+</body>
+</html>
