@@ -499,3 +499,23 @@ button {
     align-self: flex-end;
   }
 }
+.cart-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.cart-item img {
+  width: 80px;
+}
+
+.qty button {
+  padding: 4px 8px;
+}
+
+@media (max-width: 600px) {
+  .cart-item {
+    flex-direction: column;
+  }
+}
+

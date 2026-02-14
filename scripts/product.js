@@ -101,6 +101,10 @@ function updatePrice() {
 
 const addToCartBtn = document.getElementById("addToCartBtn");
 addToCartBtn.addEventListener("click", () => {
+  if (!selectedSize || !selectedColor) {
+    alert("Please select size and color");
+    return;
+  }
   addToCart(product, selectedSize, selectedColor);
 });
 
@@ -112,10 +116,15 @@ addToCartBtn.addEventListener("click", () => {
 
   });
 
-  function addToCart(product) {
+  function addToCart(product, selectedSize, selectedColor) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  const existingItem = cart.find(item => item.id === product.id);
+  const existingItem = cart.find(
+   item =>
+    item.id === product.id &&
+    item.size === selectedSize &&
+    item.color === selectedColor
+  );
 
   if (existingItem) {
     existingItem.quantity += 1;
@@ -126,7 +135,7 @@ addToCartBtn.addEventListener("click", () => {
   title: product.title,
   price: Math.round(product.price * 80),
   image: product.image,
-  quantity: quantity,
+  quantity: 1,
   size: selectedSize,
   color: selectedColor
 });
