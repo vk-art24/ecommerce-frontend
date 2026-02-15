@@ -12,3 +12,11 @@
 - Performance tested using Chrome Lighthouse
 - Image lazy loading improves initial page load
 - Optimized assets load correctly on all screen sizes
+
+## Performance Optimization
+
+- Analyzed website performance using Google Lighthouse
+- Implemented lazy loading for images
+- Optimized image loading using responsive techniques
+- Reduced render-blocking by deferring JavaScript
+- Followed best practices for browser caching and CDN usage
