@@ -59,7 +59,9 @@ function fetchProducts() {
 
     card.innerHTML = `
   <a href="product.html?id=${product.id}">
-    <img src="${product.image}" alt="${product.title}" loading="lazy">
+    <img src="${product.image}" alt="${product.title}" loading="lazy"
+      sizes="(max-width: 600px) 100vw, 
+      (max-width: 1200px) 50vw, 33vw"/>
     <h3>${product.title}</h3>
   </a>
   <p class="price">₹ ${Math.round(product.price * 80)}</p>
