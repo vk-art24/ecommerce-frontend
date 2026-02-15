@@ -20,3 +20,12 @@
 - Optimized image loading using responsive techniques
 - Reduced render-blocking by deferring JavaScript
 - Followed best practices for browser caching and CDN usage
+
+## Live Demo
+🔗 https://vk-art24.github.io/ecommerce-frontend/
+
+## Features
+- Optimized images (lazy loading)
+- Responsive design
+- Performance optimized (Lighthouse score ~97+)
+- Clean HTML, CSS, JavaScript
