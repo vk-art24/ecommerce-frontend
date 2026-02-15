@@ -29,3 +29,25 @@
 - Responsive design
 - Performance optimized (Lighthouse score ~97+)
 - Clean HTML, CSS, JavaScript
+
+## Live Demo
+https://vk-art24.github.io/ecommerce-frontend/
+
+## Features
+- Responsive ecommerce UI
+- Product listing with images & prices
+- Lazy loading for images
+- Optimized performance (Lighthouse ~95+)
+- Login & Signup UI
+- Cart functionality
+
+## Tech Stack
+- HTML
+- CSS
+- JavaScript
+- Firebase (Auth – UI ready)
+
+## Performance
+- Lazy loading enabled
+- Optimized images
+- Lighthouse tested
